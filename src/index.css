@@ -1,0 +1,20 @@
+:root{
+  --white: #fff,
+  --black: #000,
+  --top : #EC1D25,
+  --gray : #EFEFEF,
+  --gray2:#F4F1EB,
+  --dark: #222222,
+  --redP:#D21F23,
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
