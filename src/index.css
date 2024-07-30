@@ -1,16 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root{
-  --white: #fff,
-  --black: #000,
-  --top : #EC1D25,
-  --gray : #EFEFEF,
-  --gray2:#F4F1EB,
-  --dark: #222222,
-  --redP:#D21F23,
+  --white: #fff;
+  --black: #000;
+  --top : #EC1D25;
+  --gray : #EFEFEF;
+  --gray2:#F5F2EC;
+  --dark: #222222;
+  --redP:#D21F23;
 }
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+html{
+  font-family: "Edu AU VIC WA NT Hand", cursive;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
 ul{
   list-style: none;

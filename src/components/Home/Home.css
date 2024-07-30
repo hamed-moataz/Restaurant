@@ -1,38 +1,104 @@
 .swiper {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-  
-    /* Center slide text vertically */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
-    width: 20px;
-    height: 20px;
-  }
-  .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
-  }
+  width: 100%;
+  height: 100%;
+}
 
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
 
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+.swiper-slide .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--white);
+}
+.swiper-slide .content :nth-child(1) {
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.swiper-slide .content :nth-child(2) {
+  font-size: 5rem;
+  font-family: Poppins;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+}
+.swiper-slide .content :nth-child(3) {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 0.6rem 1.5rem;
+  color: var(--redP);
+  font-size: 0.8rem;
+  background: var(--white);
+  text-transform: uppercase;
+  transition: 300ms ease-in-out;
+}
+.swiper-slide .content :nth-child(3):hover {
+  background: var(--redP);
+  color: var(--white);
+}
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  width: 1rem;
+  height: 1rem;
+  background: var(--redP) !important;
+}
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem !important;
+  height: 4rem !important;
+  border-radius: 50%;
+  background: rgba(28, 24, 24, 0.2);
+  color: var(--white) !important;
+  font-size: 1rem !important;
+  transition: 300ms ease-in-out;
+}
+.swiper-button-next:hover:after,
+.swiper-rtl .swiper-button-prev:hover:after {
+  background: var(--redP);
+}
+.swiper-button-prev::after,
+.swiper-rtl .swiper-button-next::after {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem !important;
+  height: 4rem !important;
+  border-radius: 50%;
+  background: rgba(28, 24, 24, 0.2);
+  transition: 300ms ease-in-out;
+  color: var(--white) !important;
+  font-size: 1rem !important;
+}
+.swiper-button-prev:hover:after,
+.swiper-rtl .swiper-button-next:hover:after {
+  background: var(--redP);
+}
 /* ============================= start welcome ========================= */
-.welcome{
+.welcome {
   display: grid;
-  grid-template-columns: repeat(2 , 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
   padding-inline: 4rem;
   padding-block: 2rem;
@@ -40,27 +106,236 @@
   background: var(--gray2);
 }
 
-.welcome .w-left{
+.welcome .w-left {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 2rem;
 }
-.welcome .w-right{
-display: flex;
-align-items: center;
-justify-content: center;
-
+.welcome .w-left span {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--redP);
 }
-.welcome .w-right img{
+.welcome .w-left h1 {
+  font-family: Poppins;
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 1.2;
+  color: var(--black);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.welcome .w-left p {
+  font-family: Poppins;
+}
+.welcome .w-left a {
+  color: var(--black);
+}
+.welcome .w-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.welcome .w-right img {
   width: 60%;
   height: 100%;
   border-radius: 1rem;
   transition: 400ms ease-in-out;
   object-fit: cover;
 }
-.welcome .w-right img:hover{
+.welcome .w-right img:hover {
   transform: scale(1.1);
 }
 /* ============================= end welcome ========================= */
+
+/* ============================ start discover ======================= */
+.discover {
+  background-image: url(../../assets/img/home/bg-intro-01.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  height: 80vh;
+  position: relative;
+}
+.discover .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--white);
+}
+.discover .content span {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--redP);
+  margin-left: 3rem;
+}
+.discover .content h1 {
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 3.2rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+/* ============================ end discover ======================= */
+
+/* =============================== start card ========================= */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  gap: 2rem;
+  padding-inline: 2rem;
+  padding-block: 2rem;
+}
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 300px 200px;
+  gap: 1rem;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.cards .card .content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.cards .card .content :nth-child(1) {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 4px;
+  transition: 300ms ease-in-out;
+}
+.cards .card .content :nth-child(1):hover {
+  color: var(--redP);
+}
+.cards .card .content :nth-child(2) {
+  font-family: Poppins;
+}
+/* =============================== end card ========================= */
+
+/* ================================= start menu ======================== */
+.menu {
+  background: var(--gray2);
+}
+.menu .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.menu .title span {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--redP);
+}
+.menu .title h2 {
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 3.2rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.menu .img-menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding-inline: 2rem;
+}
+.menu .img-menu .img-1 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.menu .img-menu img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: 300ms ease-in-out;
+}
+.menu .img-menu img:hover {
+  transform: scale(1.1);
+}
+.menu .img-menu .img-1 button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  transition: 300ms ease-in-out;
+}
+.menu .img-menu .img-1 button:hover {
+  background: var(--redP);
+  color: var(--white);
+}
+.menu .img-menu .img {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+}
+.menu .b-img {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  padding-inline: 2rem;
+  gap: 2rem;
+  padding-block: 1rem;
+}
+.menu .b-img .img-left,
+.menu .b-img .img-right {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.menu .b-img .img-left img,
+.menu .b-img .img-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: 300ms ease-in-out;
+}
+.menu .b-img .img-left img:hover,
+.menu .b-img .img-right img:hover {
+  transform: skew(1.1);
+}
+.menu .b-img .img-left button,
+.menu .b-img .img-right button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  transition: 300ms ease-in-out;
+}
+.menu .b-img .img-left button:hover,
+.menu .b-img .img-right button:hover {
+  background: var(--redP);
+  color: var(--white);
+}
+/* ================================= end menu ======================== */
